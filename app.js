@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/app.html');
 });
 
-io.on('connection', (socket) => {
-    console.log('A user has connected');
+io.on('connect', (socket) => {
+    io.emit('connection', 'A user has connected');
 
     socket.on('chat message', msg => {
         io.emit('chat message', msg);
@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
 
 
     socket.on('disconnect', () => {
-        console.log('A user has disconnected');
+        io.emit('disconnection', 'A user has disconnected');
     })
 })
 
