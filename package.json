@@ -2,7 +2,7 @@
   "name": "chat-app",
   "version": "1.0.0",
   "description": "Learning websockets with socket.io by building a simple chat app.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.0.5"
+    "ws": "^7.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
