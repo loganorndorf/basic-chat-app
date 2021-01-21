@@ -1,1 +1,4 @@
 node_modules
+socketIO-files
+.vscode
+resources
